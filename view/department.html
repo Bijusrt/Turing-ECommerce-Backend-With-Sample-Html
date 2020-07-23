@@ -1,0 +1,192 @@
+<html style="background-image: url(https://i.pinimg.com/originals/d6/68/ab/d668abc72809303852c27275e6a56775.gif);background-repeat: no-repeat;background-size: cover;">
+
+    <head> 
+        
+        <title> Departments(Turing) </title>
+
+        <link rel="icon" href="https://i.imgur.com/LcAGU0D.png" type="png">
+
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+        <style>
+
+            button{
+
+                width: 250px;
+
+                height: 50px;
+
+                transform: translateY(40px);
+
+                background-color: chartreuse;
+
+                border-color:solid black;
+
+                border-radius: 15px;
+
+                font-size: 20px;
+
+                cursor: pointer;
+
+                font-family: "Audiowide";
+
+                outline: none;
+
+                align-content: center;
+                
+            }
+
+            .hidden_form{
+
+                display: none;
+
+                font-family: "Audiowide";
+
+                border-radius: 20px;
+
+                width: 300px;
+
+                height: 35px;
+
+                border: solid 3px cyan;
+
+                padding-top: 6px;
+
+                padding-left: 11px;
+                
+            }
+
+            .input{
+
+                height: 30px;
+
+                width: 290px;
+
+                color:solid black;
+
+                border-radius: 15px;
+
+                outline: none;
+
+                text-align: center;
+
+                font-weight: bolder;
+
+            }
+
+            .main_div{
+
+                height: 100%;
+
+            }
+
+            .sub_div{
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
+                font-size: 100px;
+
+                font-family: "Audiowide";
+                
+                color: rgb(226, 63, 150);
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+       <div class="main_div">
+
+        <div style="height: 33%;" class="sub_div"> 
+        
+            <header>Departments</header>
+
+        </div>
+
+        <div style="height: 33%;">
+        
+            <div style="width: 25%;height: 100%;float: left;"></div>
+
+            <div style="width: 25%;height: 100%;display: flex;justify-content: center;float: left;">
+            
+               <button onclick="location.href='/departments';">All Departments</button> 
+                
+            </div>
+
+            <div style="width: 25%;height: 100%;float: left;">
+            
+               <div style="height: 50%;width: 100%;">
+
+                <button onclick="showform()">Department Id</button>
+            
+                </div>
+
+                <div style="height: 50%;width: 100%;">
+    
+                    <form 
+                     action="/departments/department_id">
+
+                        <input class="input" type="text" name="department_id" placeholder="Enter Department Id" required> 
+                    
+                    </form>
+            
+                </div>
+
+            </div>
+
+            <div style="width: 25%;height: 100%;float: left;"></div>
+
+        </div>
+
+        <div style="height: 36%;">
+
+            <div style="height: 100%;width: 50%;float: left;display: flex;align-items: center">
+                    
+                <button onclick="location.href='/';">&laquo;&laquo;&laquo;&emsp;Homepage</button>
+            
+            </div>
+
+            <div style="height: 100%;width: 50%;float: left;display: flex;align-items: center;justify-content: flex-end;">
+            
+                <button onclick="location.href='/category';">Categories&emsp;&raquo;&raquo;&raquo;</button>
+                
+            </div>
+
+        </div>
+
+       </div>
+    
+    </body>
+
+    <script>
+
+        var hide = true;
+
+        function showform(){
+
+            if(hide){
+
+                document.getElementById('myform').style.display = "block";
+
+                hide = false;
+
+            }else{
+
+                document.getElementById('myform').style.display = "none";
+
+                hide = true;
+
+            }
+        
+        };
+    
+    </script>
+
+</html>
